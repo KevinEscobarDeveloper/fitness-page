@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="container__wrapped">
+        <div class="container__info">
+            <h2>Learn from World's Best Instructors <img class="img dumbell-img" src="../../../../assets/dumbell.png"
+                    alt="dumbell" /> Around The World </h2>
+            <img src="../../../assets/font_home.png" alt="" class="img img-boy">
+        </div>
+
+        <div class="container__form">
+            <form action="">
+                <h2>Create Account</h2>
+                <input type="text" name="name" id="" placeholder="Full Name">
+                <input type="email" name="email" id="" placeholder="Email Address">
+                <div class="container__form-pasword">
+                    <input [type]="showPassword ? 'text' : 'password'" name="password" id="password"
+                        placeholder="Password">
+                    <button type="button" class="btn btn-eye" (click)="onShowPassword()">
+                        <i class="fa" [ngClass]="{'fa-eye-slash': !showPassword, 'fa-eye': showPassword}"
+                            style="font-size: 24px;"></i>
+                    </button>
+                </div>
+                <div class="container__form-term">
+                    <input type="checkbox" name="agree" id="">
+                    <span>By clicking here, I state that I have read and understood the terms and conditions.</span>
+                </div>
+                <button class="btn btn-submit">Sign Up</button>
+            </form>
+            <h3>Or Sign Up With</h3>
+
+        </div>
+    </div>
+</div>

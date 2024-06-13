@@ -1,0 +1,57 @@
+*{
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+.container {
+    display: flex;
+    align-items: center;
+    margin: 0 5rem;
+    justify-content: space-between;
+    height: 5rem;
+}
+header img {
+    width: 4rem;
+}
+
+.container__logo {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.container__sign-up {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    button {
+        width: 9rem;
+        height: 3rem;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        background-color: red;
+        -webkit-box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
+        box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
+        cursor: pointer;
+    }
+}
+
+header ul {
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.active {
+    color: red;
+}

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="text-container">
+        <h2>What Our Happy Clients Say About Us</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad iure laudantium ipsam ratione debitis, fugiat
+            est doloremque eius unde quod, itaque, assumenda perferendis! Nostrum totam, ullam accusantium qui id omnis?
+        </p>
+        <div class="review-container">
+            <div class="image__container">
+                <img src="../../../assets/profile images/1.jpg" alt="">
+                <img src="../../../assets/profile images/2.jpg" alt="">
+                <img src="../../../assets/profile images/3.jpg" alt="">
+                <img src="../../../assets/profile images/4.jpg" alt="">
+                <i class="material-icons custom-icon plus">add_circle</i>
+            </div>
+            <div class="qualification__container">
+                <i class="material-icons ">star</i>
+                <p>4.9 (450 reviews)</p>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let review of reviews; let i = index" [ngClass]="{'profile__card': true, 'active': i === activeIndex}">
+        <div class="profile__header">
+            <img [src]="review.photo" alt="Foto de perfil">
+            <div class="user__data">
+                <h2>{{ review.name }}</h2>
+                <p>{{ review.state }}</p>
+            </div>
+        </div>
+        <div class="start__calification">
+            <i *ngFor="let _ of [].constructor(floor(review.calification))" class="material-icons">star</i>
+            <i *ngIf="hasHalfStar(review.calification)" class="material-icons">star_half</i>
+            <i *ngFor="let _ of [].constructor(5 - ceil(review.calification))" class="material-icons">star_border</i>
+        </div>
+        <p>{{ review.opinion }}</p>
+        <button (click)="nextReview()" class="btn btn-next"><i
+                class="material-icons navigate-icon">navigate_next</i></button>
+        <button (click)="previousReview()" class="btn btn-previous"><i
+                class="material-icons navigate-icon">navigate_before</i></button>
+    </div>
+
+
+
+    <img class="img img-arrow" src="../../../assets/arrow.png" alt="">
+
+</div>

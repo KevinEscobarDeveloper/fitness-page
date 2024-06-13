@@ -1,0 +1,28 @@
+<header>
+    <div class="container">
+        <div class="container__logo">
+            <img src="../../../../assets/dumbell.png" alt="">
+            <h2>Fitnexvia</h2>
+        </div>
+        <div class="container__sign-up">
+            <ul>
+                <li [class.active]="isActive('/home')">
+                    <a (click)="navigate('/home')">Home</a>
+                </li>
+                <li [class.active]="isActive('/about-us')">
+                    <a (click)="navigate('/about-us')">About us</a>
+                </li>
+                <li [class.active]="isActive('/programs')">
+                    <a (click)="navigate('/programs')">Programs</a>
+                </li>
+                <li [class.active]="isActive('/membership')">
+                    <a (click)="navigate('/membership')">Membership</a>
+                </li>
+                <li [class.active]="isActive('/testimonials')">
+                    <a (click)="navigate('/testimonials')">Testimonials</a>
+                </li>
+            </ul>
+            <button [routerLink]="['register']">Sign Up</button>
+        </div>
+    </div>
+</header>
