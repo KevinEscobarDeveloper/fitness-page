@@ -6,10 +6,12 @@ import { AboutUsComponent } from './UI/about-us/about-us.component';
 import { ProgramsComponent } from './UI/programs/programs.component';
 import { MembershipComponent } from './UI/membership/membership.component';
 import { TestimonialsComponent } from './UI/testimonials/testimonials.component';
+import { LoginComponent } from './UI/login/login.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'programs', component: ProgramsComponent },
   { path: 'membership', component: MembershipComponent },

@@ -17,6 +17,7 @@ import { ReviewServiceService } from './infraestructure/review-api/review-servic
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlansGateway } from './domain/models/plans/gateway/plans-gateway';
 import { PlanService } from './infraestructure/plan-api/plan.service';
+import { LoginComponent } from './UI/login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PlanService } from './infraestructure/plan-api/plan.service';
     ProgramsComponent,
     MembershipComponent,
     TestimonialsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
