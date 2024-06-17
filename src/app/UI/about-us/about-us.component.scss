@@ -1,9 +1,9 @@
-*{
+* {
     font-family: "Barlow Semi Condensed", sans-serif;
 }
 .container {
     display: flex;
-    height: calc(100vh - 5rem);
+    height: auto;
 }
 .about-us {
     color: white;
@@ -43,8 +43,8 @@
     }
 
     button {
-        width: 13rem;
-        height: 4rem;
+        width: clamp(11.375rem, 11.835rem + -1.887vw, 9.5rem);
+        height: clamp(3.875rem, 4.116rem + -1.205vw, 2.625rem);
         border-radius: 5px;
         color: white;
         font-weight: bold;
@@ -54,5 +54,24 @@
         box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
         cursor: pointer;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        grid-template-areas: "textArea" "imageArea";
+        grid-template-columns: 1fr;
+        width: 100vw;
+    }
+
+    .container__image {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    .about-us {
+        width: 8rem;
+        height: 5rem;
     }
 }

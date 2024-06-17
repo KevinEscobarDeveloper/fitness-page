@@ -5,7 +5,7 @@
             dolorum mollitia ab dolores.</p>
 
         <div class="toggle-container">
-            <input type="checkbox" id="toggle-switch" class="toggle-switch">
+            <input type="checkbox" id="toggle-switch" [(ngModel)]="isAnnual" class="toggle-switch">
             <label for="toggle-switch" class="toggle-label">
                 <span class="toggle-text">Monthly</span>
                 <span class="toggle-button"></span>
@@ -18,7 +18,9 @@
         <div *ngFor="let plan of plans; let i = index" [ngClass]="{'card': true, 'card-active': activated === i}"
             [@shine]="shiningIndex === i ? 'shining' : 'default'" class="card">
             <h2>{{plan.name}}</h2>
-            <h3>{{plan.price}} <span>/Per Month</span></h3>
+            <h3 [ngClass]="isAnnual ? 'bounce' : 'bounceMonth'">{{isAnnual ? plan.priceYear : plan.priceMonth}}
+                <span>/Per{{isAnnual ? 'Year' : 'Month'}}</span>
+            </h3>
             <div *ngFor="let characteristic of plan.characteristics">
                 <p><img src="../../../assets/check.png" alt="">{{characteristic}}</p>
             </div>

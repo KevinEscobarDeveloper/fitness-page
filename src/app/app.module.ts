@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './UI/home/home.component';
 import { HeaderComponent } from './UI/shared/header/header.component';
-import { FooterComponent } from './UI/shared/footer/footer.component';
+import { FooterComponent } from './UI/footer/footer.component';
 import { RegisterComponent } from './UI/register/register.component';
 import { AboutUsComponent } from './UI/about-us/about-us.component';
 import { ProgramsComponent } from './UI/programs/programs.component';
@@ -17,6 +17,7 @@ import { ReviewServiceService } from './infraestructure/review-api/review-servic
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlansGateway } from './domain/models/plans/gateway/plans-gateway';
 import { PlanService } from './infraestructure/plan-api/plan.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PlanService } from './infraestructure/plan-api/plan.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     { provide: ReviewGateway, useClass: ReviewServiceService },

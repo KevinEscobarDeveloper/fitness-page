@@ -4,7 +4,10 @@
             <img src="../../../../assets/dumbell.png" alt="">
             <h2>Fitnexvia</h2>
         </div>
-        <div class="container__sign-up">
+        <div class="hamburger-menu" (click)="toggleMenu()">
+            &#9776; <!-- Símbolo de menú hamburguesa -->
+        </div>
+        <div class="container__sign-up" [ngClass]="" [class.open]="menuOpen">
             <ul>
                 <li [class.active]="isActive('/home')">
                     <a (click)="navigate('/home')">Home</a>

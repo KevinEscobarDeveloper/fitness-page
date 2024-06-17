@@ -50,4 +50,6 @@ export class TestimonialsComponent implements OnInit {
       this.activeIndex = this.reviews.length - 1; // Vuelve al último review si es el primero
     }
   }
+  
+  
 }

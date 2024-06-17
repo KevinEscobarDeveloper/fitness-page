@@ -4,9 +4,12 @@ h1 {
 
 .container__text {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   margin: 3rem 10vw;
   color: white;
+}
+.container__text h1 {
+  text-align: center;
 }
 
 .container__text p {
@@ -39,6 +42,32 @@ h1 {
   border-left: 3px solid #ff9e02;
 }
 
+.offer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(238, 55, 92);
+  transition: width 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.offer:hover::before {
+  width: 100%;
+}
+
+.offer:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.offer > * {
+  position: relative;
+  z-index: 1;
+}
+
 img {
   width: 4vw;
   filter: invert(100%);
@@ -55,4 +84,32 @@ button {
 
 button img {
   width: 2vw;
+}
+
+@media (max-width: 768px) {
+  .container__offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5vh;
+  }
+  .offer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+  }
+  .offer img:first-child {
+    width: 5vw;
+    position: absolute;
+    right: 0;
+  }
+  .offer img:last-child {
+    width: 3vw;
+    position: relative;
+  }
+  .container__text p {
+    text-align: justify;
+  }
 }/*# sourceMappingURL=programs.component.css.map */

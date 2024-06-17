@@ -1,6 +1,8 @@
-*{
+/* Estilo global para la fuente */
+* {
     font-family: "Barlow Semi Condensed", sans-serif;
 }
+
 .container {
     display: flex;
     align-items: center;
@@ -8,6 +10,7 @@
     justify-content: space-between;
     height: 5rem;
 }
+
 header img {
     width: 4rem;
 }
@@ -26,19 +29,19 @@ header img {
     display: flex;
     gap: 4rem;
     align-items: center;
+}
 
-    button {
-        width: 9rem;
-        height: 3rem;
-        border-radius: 5px;
-        color: white;
-        font-weight: bold;
-        background-color: red;
-        -webkit-box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
-        box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
-        cursor: pointer;
-    }
+.container__sign-up button {
+    width: 9rem;
+    height: 3rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    -webkit-box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
 }
 
 header ul {
@@ -50,8 +53,74 @@ header ul {
     color: white;
     cursor: pointer;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
 }
 
-.active {
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header ul li.active a {
     color: red;
+}
+
+.hamburger-menu {
+    display: none; /* Ocultar por defecto, se mostrará en móviles */
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mostrar el botón en dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        margin: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .container__logo {
+        margin-left: 1rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .container__sign-up {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #333; /* Color de fondo para visibilidad */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Asegurarse de que esté sobre otros elementos */
+    }
+
+    .container__sign-up.open {
+        display: flex;
+    }
+
+    .container__sign-up ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .container__sign-up li {
+        margin: 10px 0;
+    }
+
+    .container__sign-up button {
+        width: 100%;
+        padding: 15px 0;
+        margin-top: 10px;
+    }
 }
