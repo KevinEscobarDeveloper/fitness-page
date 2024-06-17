@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlansGateway } from './domain/models/plans/gateway/plans-gateway';
 import { PlanService } from './infraestructure/plan-api/plan.service';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './UI/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     ProgramsComponent,
     MembershipComponent,
     TestimonialsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
