@@ -19,6 +19,8 @@ import { PlansGateway } from './domain/models/plans/gateway/plans-gateway';
 import { PlanService } from './infraestructure/plan-api/plan.service';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './UI/login/login.component';
+import { SidebardComponent } from './UI/dashboard/sidebard/sidebard.component';
+import { ContentComponent } from './UI/dashboard/content/content.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { LoginComponent } from './UI/login/login.component';
     MembershipComponent,
     TestimonialsComponent,
     LoginComponent,
+    SidebardComponent,
+    ContentComponent,
   ],
   imports: [
     BrowserModule,

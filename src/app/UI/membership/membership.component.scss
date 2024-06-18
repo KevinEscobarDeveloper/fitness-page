@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    height: min-content;
 }
 
 .title-container {
@@ -32,15 +33,15 @@
 
 .card {
     cursor: pointer;
-    width: 22rem;
-    height: 38rem;
+    width: clamp(20.75rem, 20.498rem + 1.214vw, 22rem);
+    height: clamp(26.875rem, 19.771rem + 12.857vh, 28rem);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: clamp(0.75rem, 0.7rem + 0.243vw, 1rem);
     color: white;
     border-radius: 10px;
     background-color: rgb(88, 87, 87);
-    padding: 2rem 4rem;
+    padding: clamp(1.25rem, -1.907rem + 5.714vh, 1.75rem) clamp(2.375rem, 2.501rem + -0.607vw, 1.75rem);
     box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -86,11 +87,11 @@
     background-color: transparent;
     border: 2px solid white;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: clamp(1rem, -0.579rem + 2.857vh, 1.25rem);
     font-weight: bold;
     color: white;
     padding: 0.9rem;
-    width: 80%;
+    width: clamp(11.5rem, 11.395rem + 0.504vw, 12rem);
     cursor: pointer;
     transition: 0.5s ease-in-out;
     -webkit-transition: 0.5s ease-in-out;
@@ -115,8 +116,7 @@
     -o-transition: ease-in;
     -webkit-animation: bounce 0.9s;
 }
-.bouncecard-active {
-}
+
 @keyframes bounce {
     0%,
     20%,
@@ -176,8 +176,7 @@
     justify-content: space-between;
     background-color: rgb(246, 46, 11);
     width: 25rem;
-    height: 42rem;
-    gap: clamp(0.875rem, 0.675rem + 1vw, 1.125rem);
+    height: clamp(29.375rem, 26.667rem + 5.208vh, 30rem);
     -webkit-transition: linear 1s ease-out;
     -moz-transition: linear 1s ease-out;
     -ms-transition: linear 1s ease-out;
@@ -238,6 +237,12 @@
     left: calc(100% - 50%);
 }
 
+@media only screen and (max-width: 1024px) and (max-height: 600px) {
+    .cards-container {
+        display: flex;
+    }
+}
+
 @media (max-width: 768px) {
     .cards-container {
         flex-direction: column;
@@ -249,7 +254,13 @@
         justify-content: space-between;
         text-align: end;
     }
-    .card:nth-last-child(2) {
-        margin-bottom: 4rem;
+}
+
+@media (min-width: 700px) and (max-width: 768px) and (min-height: 1024px) {
+    .container {
+        overflow: hidden;
+    }
+    .card button {
+        width: 19rem;
     }
 }
